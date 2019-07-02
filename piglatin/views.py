@@ -24,4 +24,4 @@ def translate(request):
             # ay
             translation += 'ay '
 
-    return HttpResponse(translation)
+    return render(request, 'translate.html', {'original':original, 'translation':translation})

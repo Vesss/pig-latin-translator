@@ -5,4 +5,5 @@ def home(request):
     return render(request, 'home.html')
 
 def translate(request):
-    return HttpResponse("You're on the translate page! " + request.GET['originaltext'])
+    original = request.GET['originaltext']
+    return HttpResponse("You're on the translate page! " + original)
